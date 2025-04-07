@@ -1,0 +1,107 @@
+/* Base styles */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --card-bg: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --primary-color: #2980b9;
+    --secondary-color: #27ae60;
+    --text-color: #f9f9f9;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: var(--transition);
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive layout using Flexbox and CSS Grid */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* CSS Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project-card, .blog-post {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Theme toggle button */
+#theme-toggle {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.05);
+}
