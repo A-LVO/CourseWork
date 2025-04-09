@@ -1,114 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alvin Macharia - Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="#home" class="logo">Portfolio</a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><button id="theme-toggle"><i class="fas fa-moon"></i></button></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button id="theme-toggle">Toggle Theme</button>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="section">
-            <div class="container">
-                <h1 id="dynamic-greeting">Welcome!</h1>
-                <p class="tagline">Front-End Developer & UI Designer with skills in javascript, html, css and python</p>
-            </div>
-        </section>
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <h1>Welcome to My World</h1>
+      <p id="greeting">Hello!</p>
+      <p>This is the personal portfolio website of Alvin Macharia where you’ll find a glimpse into my projects, experiences, and personal insights.</p>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-grid">
-                    <img src="IMG_2083.PNG" alt="Profile Picture" class="profile-img">
-                    <div class="bio">
-                        <h3>Hi, Alvin Macharia</h3>
-                        <p>With a strong background in software development, I specialize in creating seamless web applications, mobile solutions, and digital experiences. I’m constantly exploring new technologies to push the boundaries of what's possible.</p>
-                        <div class="skills">
-                            <div class="skill" data-level="90"><span>HTML/CSS</span></div>
-                            <div class="skill" data-level="85"><span>JavaScript</span></div>
-                            <div class="skill" data-level="80"><span>React</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="assets/profile.jpg" alt="Profile Picture of Alvin Macharia" />
+      <p>I’m Alvin Macharia, a passionate developer with a creative mind. Here, I share details about my background, experiences, and the journey that led me to where I am today.</p>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile</button>
-                </div>
-                <div class="projects-grid"></div>
-            </div>
-        </section>
-
-        <!-- Blog Section -->
-        <section id="blog" class="section">
-            <div class="container">
-                <h2>Latest Posts</h2>
-                <div class="search-box">
-                    <input type="text" id="blog-search" placeholder="Search posts...">
-                </div>
-                <div class="blog-posts"></div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Get in Touch</h2>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Name" required>
-                        <span class="error"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Email" required>
-                        <span class="error"></span>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Message" required></textarea>
-                        <span class="error"></span>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    <!-- Projects Portfolio Section -->
+    <section id="portfolio">
+      <h2>Portfolio Projects</h2>
+      <div class="filters">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+      </div>
+      <div class="projects">
+        <div class="project-item" data-category="web">
+          <h3>Website Redesign</h3>
+          <p>A revamped design for a modern business application.</p>
+          <button class="project-details" data-title="Website Redesign" data-desc="An innovative redesign incorporating responsive layouts and interactive animations.">More Details</button>
         </div>
-    </footer>
+        <div class="project-item" data-category="data">
+          <h3>Data Visualization</h3>
+          <p>An engaging project presenting data insights using interactive charts.</p>
+          <button class="project-details" data-title="Data Visualization" data-desc="A project showcasing how effective data visualization can make data more understandable.">More Details</button>
+        </div>
+        <div class="project-item" data-category="ai">
+          <h3>AI Chatbot</h3>
+          <p>An intelligent chatbot built with modern machine learning techniques.</p>
+          <button class="project-details" data-title="AI Chatbot" data-desc="This chatbot leverages natural language processing to offer a smooth conversational experience.">More Details</button>
+        </div>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+    <!-- Blog Section -->
+    <section id="blog">
+      <h2>My Blog</h2>
+      <div id="blog-container">
+        <!-- Blog posts will load here dynamically -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" required placeholder="Enter your name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" required placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea id="message" required placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+      <p class="signature">Crafted with passion by Alvin Macharia.</p>
+    </section>
+  </main>
+
+  <!-- Modal for Project Details -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
